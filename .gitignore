@@ -1,0 +1,5 @@
+node_modules
+bower_components
+saved-reports/**/*.xlsx
+google.png
+~$*

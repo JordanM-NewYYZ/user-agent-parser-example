@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <link href="https://b2bqa.adidas-group.com/portal/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://b2bqa.adidas-group.com/portal/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* existing styles. no need to change*/
+    
+    #iframeWrap {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      top: 45px;
+      height: 97%;
+      z-index: 1;
+      /* scrolling fix for mobile browsers */
+      
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    #contentFrame {
+      display: block;
+      width: 100%;
+      height: 97%;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    /*existing styles END*/
+    /* START COPY HERE */
+    /* Smartphones and Tablets */
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+      body {
+        overflow: hidden;
+      }
+      *:not(html) {
+        -webkit-transform: translate3d(0, 0, 0);
+      }
+      #iframeWrap {
+        position: relative;
+        top: 45px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        -webkit-overflow-scrolling: touch !important;
+        overflow-y: auto !important;
+        height: 85vh;
+        max-height: 100vh;
+        min-height: 85vh;
+        width: 100%;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      #contentFrame {
+        height: 100% !important;
+        width: 100% !important;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        overflow: hidden;
+      }
+    }
+    /* END COPY HERE*/
+    /* iframe simulation do not use below this line */
+    /* DO NOT USE */
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /* DO NOT USE */
+    
+    #header {
+      height: 45px;
+      background-color: black;
+      position: fixed;
+      right: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">Header</div>
+  <div id="iframeWrap">
+    <iframe scroll="auto" scrolling="no" id="contentFrame" name="contentFrame" frameborder="0" src="./index.html"></iframe>
+  </div>
+</body>
+
+</html>

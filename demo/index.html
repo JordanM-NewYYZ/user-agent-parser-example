@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>User Agent Parser Demo</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+<body ng-app="demoApp">
+
+  <div class="container" ng-controller="mainCtrl">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Adidas NodeJS UA Parser Demo</h1>
+        <p>Use the code in this demo as a starting point to implement User Agent Parsing in a node server.</p>
+      </div>
+      <div class="col-md-12">
+        <label for="parse-string">Parse String</label>
+        <input style="text" class="parse-string" name="parse-string" ng-model="sendThis.uastring">
+        <button class="btn btn-success parse-button" ng-click="parseThis()">Parse</button>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <h1>Output:</h1>
+
+      <table class="result-table">
+        <thead>
+          <tr>
+            <td>Type</td>
+            <td>Browser</td>
+            <td>Browser Version</td>
+            <td>OS</td>
+            <td>OS Version</td>
+            <td>Device Type</td>
+            <td>User Agent</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="parsed in parsedList">
+            <td>{{parsed.type}}</td>
+            <td>{{parsed.uaFamily}}</td>
+            <td>{{parsed.uaName}}</td>
+            <td>{{parsed.osFamily}}</td>
+            <td>{{parsed.osName}}</td>
+            <td>{{parsed.deviceType}}</td>
+            <td>{{parsed.userAgentString}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <style>
+  .result-table {
+    width: 100%;
+    border-top: 1px solid black;
+  }
+  
+  .result-table thead {
+    font-weight: bold;
+    background-color: grey;
+    color: white;
+  }
+  
+  .result-table tbody {
+    border-radius: 5px;
+  }
+  
+  .jumbotron {
+    height: 300px!important;
+  }
+  
+  .result-table tbody tr {
+    min-height: 30px;
+    border-bottom: 1px solid black;
+  }
+  
+  .result-table tbody tr td:last-child:hover {
+    display: inherit;
+  }
+  
+  .result-table tbody tr:hover {
+    background-color: black!important;
+    color: white!important;
+  }
+  
+  .result-table tbody tr:hover td {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  
+  .result-table tbody tr:nth-child(even) {
+    background-color: #EEE;
+  }
+  
+  .result-table td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+  }
+  
+  .parse-string {
+    width: 100%;
+  }
+  
+  .parse-button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  /*Widths*/
+  
+  .result-table thead tr td:first-child,
+  .result-table thead tr td:nth-child(2) {
+    width: 100px;
+  }
+  
+  .result-table thead tr td:nth-child(3) {
+    width: 150px;
+  }
+  
+  .result-table thead tr td:nth-child(4),
+  .result-table thead tr td:nth-child(5) {
+    width: 100px;
+  }
+  
+  .result-table thead tr td:last-child {
+    width: 425px;
+  }
+  </style>
+
+</body>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="main.js"></script>
+
+</html>
