@@ -1,5 +1,5 @@
 # Adidas-User-Agent-Parser
-Node.js / AngularJS to generate UA JSON
+Node.js / AngularJS to generate UA JSON (Built on Nick Muerdter's UA Parser: https://github.com/GUI/uas-parser)
 # Setup
 
 ###Install dependencies
@@ -33,3 +33,6 @@ Node.js / AngularJS to generate UA JSON
 
 4) Handle responses etc. & send the parsed info
 * Parsed info is returned as an object
+
+###Credits 
+Nick Muerdter (https://github.com/GUI/uas-parser)
