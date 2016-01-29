@@ -1,6 +1,7 @@
 'use strict()';
 
 var express = require('express');
+// Include uaParser
 var uaParser = require('uas-parser');
 
 var app = express();
@@ -31,6 +32,7 @@ app.post('/parser/', function (req, res) {
   var uastring = req.body.uastring;
 
   try {
+    // Call the parser... Checks to see if result is cached, otherwise it makes a call, updates cache and returns result
     var parsed = uaParser.parse(uastring);
   } catch (err) {
     console.error('Parse error: ', err);
