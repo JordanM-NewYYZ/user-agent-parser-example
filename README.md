@@ -25,8 +25,11 @@ Node.js / AngularJS to generate UA JSON
 ###Custom Node Setup (For future projects)
 1) Inject UA Parser
 * `var uaParser = require('uas-parser');`
+
 2) Create an endpoint in your Node server.
+
 3) Make a post request with the UA string to this endpoint and call the parser
 * e.g.: `var parsed = uaParser.parse(uastring);`
+
 4) Handle responses etc. & send the parsed info
 * Parsed info is returned as an object
